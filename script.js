@@ -1,5 +1,5 @@
  const validUsernames = ['user1', 'user2', 'user3'];
-const correctNumber = Math.floor(Math.random() * 10) + 1;
+const correctNumber = Math.floor(Math.random() * 5) + 1;
 
 document.getElementById('login-form').addEventListener('submit', function (event) {
     event.preventDefault();
@@ -13,7 +13,7 @@ document.getElementById('login-form').addEventListener('submit', function (event
 });
 
 document.getElementById('submit-guess').addEventListener('click', function () {
-    const guess = parseInt(document.getElementById('guess').value, 10);
+    const guess = parseInt(document.getElementById('guess').value, 5);
     const message = document.getElementById('game-message');
     if (guess === correctNumber) {
         message.textContent = 'Congratulations! You guessed the correct number.';
